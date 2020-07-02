@@ -6,6 +6,35 @@
 <title>qlsv</title>
 </head>
 <body>
+	<h3>Thong tin sinh vien</h3>
+	<form th:action="@{add}" action="post">
+		<table>
+			<tr>
+				<td>MSSV:</td>
+				<td><input name="mssv"></td>
+			</tr>
+			<tr>
+				<td>ho ten:</td>
+				<td><input name="hoten"></td>
+			</tr>
+			<tr>
+				<td>ngaysinh:</td>
+				<td><input name="ngaysinh"></td>
+			</tr>
+			<tr>
+				<td>phai:</td>
+				<td><input name="phai"></td>
+			</tr>
+			<tr>
+				<td>dtb:</td>
+				<td><input name="dtb"></td>
+			</tr>
+			<tr>
+				
+				<td><input type="submit" value="gui" name="submit"></td>
+			</tr>
+		</table>
+	</form>
 	<h3>Danh sách Sinh Vien</h3>
 	<table border="1">
 		<tr>
