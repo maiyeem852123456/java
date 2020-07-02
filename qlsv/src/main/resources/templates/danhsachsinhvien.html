@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+
+<head>
+<meta charset="utf-8">
+<title>qlsv</title>
+</head>
+<body>
+	<h3>Danh sách Sinh Vien</h3>
+	<table border="1">
+		<tr>
+			<th>STT</th>
+			<th>MSSV</th>
+			<th>Ho Ten</th>
+			<th>Phai</th>
+			<th>Ngay Sinh</th>
+			<th>DTB</th>
+		</tr>
+		<tr th:each="sv,status: ${dssv}">
+			<td th:text="${status.index+1}"></td>
+			<td th:text="${sv.mssv}"></td>
+			<td th:text="${sv.hoten}"></td>
+			<td th:text="${sv.phai?'Nam':'Nu'}"></td>
+			<td th:text="${#dates.format(sv.ngaysinh,'dd/MM/yyyy')}"></td>
+			<td th:text="${sv.dtb}"></td>
+			<td><a th:href="@{update(mssv=${sv.mssv})}">Update</a></td>
+			<td><a th:href="@{delete(mssv=${sv.mssv})}">Delete</a></td>
+		</tr>
+	</table>
+</body>
+</html>
